@@ -1,10 +1,11 @@
 # Theme-Master
 
 Pour obtenir le thème veuillez contacter *Skill#9202* sur Discord, celui-ci est disponible pour 5€ uniquement via Paypal.
+Si vous avez déjà acheté ce thème via l'ancien market de mineweb.org vous pouvez le récupérer ici : https://check.skilldev.be
 
-Pour effectué une mise à jour, il vous suffit de remplacer les fichiers existant par ceux ce trouvant ici.
+Pour effectuer une mise à jour, il vous suffit de remplacer les fichiers existant par ceux ce trouvant ici.
 
-Mise à jours du thème Master.
+Mises à jour du thème Master.
 
 *20/07/2018* :
 
