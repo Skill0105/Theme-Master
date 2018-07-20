@@ -8,7 +8,7 @@ Pour effectuer une mise à jour, il vous suffit de remplacer les fichiers exista
 
 Vous pouvez simplement télécharger le zip et l'extraire à la racine du thème.
 
-Changelog
+## Changelog
 
 *20/07/2018* :
 
