@@ -95,38 +95,47 @@
 
             </div>
 
-            <?php if(empty($theme_config['limit_news'])) { $theme_config['limit_news'] = "3"; } ?>
-            <?php if(!empty($search_news)) { $i = 0; foreach ($search_news as $news) { $i++; if($i > $theme_config['limit_news']) { break; } ?>
-                <?php if(empty($theme_config['news_anim']) || $theme_config['news_anim'] == "Oui") { ?>
-                    <ul class="list-unstyled">
+                <?php if(empty($theme_config['limit_news'])) { $theme_config['limit_news'] = "3"; } ?>
+                <?php if(!empty($search_news)) { $i = 0; foreach ($search_news as $news) { $i++; if($i > $theme_config['limit_news']) { break; } ?>
+                    <?php if(empty($theme_config['news_anim']) || $theme_config['news_anim'] == "Oui") { ?>
+                        <ul class="list-unstyled">
                         <li class="animated zoomIn fadeIn">
-                <?php } ?>
-                        <div class="news-all" style="width:100%;">
-                            <a href="<?= $this->Html->url(array('controller' => 'blog', 'action' => $news['News']['slug'])); ?>"><h2><?= $news['News']['title']; ?></h2></a>
-                            <span class="date theme-color-text"><?= $Lang->date($news['News']['created']); ?></span>
-                            <div class="texte"><p><?= $this->Text->truncate($news['News']['content'], 700, array('ellipsis' => '...', 'html' => true)); ?></p></div>
-                            <div class="likes">
-                                <?= $news['News']['count_likes'] ?> <i class="fa fa-thumbs-up"></i>
+                    <?php } ?>
+                    <div class="col-md-12">
+                        <div class="news-all" style="width:100%;padding: 0px;">
+                            <?php if($EyPlugin->isInstalled('empiredev.newsadvanced')){ ?>
+                                <img src="<?= $news['News']['img'] ?>" style="margin-bottom: 10px;">
+                            <?php } ?>
+                            <div style="padding: 20px;">
+                                <a href="<?= $this->Html->url(array('controller' => 'blog', 'action' => $news['News']['slug'])); ?>"><h2><?= $news['News']['title']; ?></h2></a>
+                                <span class="date theme-color-text"><?= $Lang->date($news['News']['created']); ?></span>
+                                <div class="texte"><p><?= $this->Text->truncate($news['News']['content'], 700, array('ellipsis' => '...', 'html' => true)); ?></p></div>
+                                <div class="likes">
+                                    <?= $news['News']['count_likes'] ?> <i class="fa fa-thumbs-up"></i>
+                                </div>
+                                <div class="commentaires">
+                                    <?= $news['News']['count_comments'] ?> <i class="fa fa-comments" aria-hidden="true"></i>
+                                </div>
+                                <a href="<?= $this->Html->url(array('controller' => 'blog', 'action' => $news['News']['slug'])); ?>" class="btn btn-primary pull-right"><?= $Lang->get('NEWS__READ_MORE'); ?></a>
                             </div>
-                            <div class="commentaires">
-                                <?= $news['News']['count_comments'] ?> <i class="fa fa-comments" aria-hidden="true"></i>
-                            </div>
-                            <a href="<?= $this->Html->url(array('controller' => 'blog', 'action' => $news['News']['slug'])); ?>" class="btn btn-primary pull-right"><?= $Lang->get('NEWS__READ_MORE'); ?></a>
                         </div>
-                <?php if(empty($theme_config['news_anim']) || $theme_config['news_anim'] == "Oui") { ?>
-                        </li>
-                    </ul>
-                <?php } ?>
-            <?php } ?>
-            <?php } else { echo '<div class="alert alert-danger">'.$Lang->get('NEWS__NONE_PUBLISHED').'</div>'; } ?>
-            <?php if(empty($theme_config['more']) || $theme_config['more'] == "Oui") { ?>
-                <a href="/blog">
-                    <div class="article_title theme-color-background">
-                        <h1>Voir plus d'articles</h1>
                     </div>
-                </a>
-            <?php } ?>
-        </div>
+                    <?php if(empty($theme_config['news_anim']) || $theme_config['news_anim'] == "Oui") { ?>
+                        </li>
+                        </ul>
+                    <?php } ?>
+                <?php } ?>
+                <?php } else { echo '<div class="alert alert-danger">'.$Lang->get('NEWS__NONE_PUBLISHED').'</div>'; } ?>
+                <div class="col-lg-12">
+                    <?php if(empty($theme_config['more']) || $theme_config['more'] == "Oui") { ?>
+                        <a href="/blog">
+                            <div class="article_title theme-color-background">
+                                <h1>Voir plus d'articles</h1>
+                            </div>
+                        </a>
+                    <?php } ?>
+                </div>
+            </div>
 
         <?php if(empty($theme_config['sidebar']) || $theme_config['sidebar'] == "Oui") { ?>
             <div class="col-md-3">
