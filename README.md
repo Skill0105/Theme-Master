@@ -4,6 +4,8 @@ Pour obtenir le thème veuillez contacter *Skill#9202* sur Discord, celui-ci est
 
 Si vous avez déjà acheté ce thème via l'ancien market de mineweb.org vous pouvez le récupérer ici : https://check.skilldev.be
 
+Une demo est disponible ici : https://master.skilldev.be
+
 Pour effectuer une mise à jour, il vous suffit de remplacer les fichiers existant par ceux ce trouvant ici.
 
 Vous pouvez simplement télécharger le zip et l'extraire à la racine du thème.
