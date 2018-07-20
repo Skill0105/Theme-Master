@@ -18,3 +18,4 @@ Vous pouvez simplement télécharger le zip et l'extraire à la racine du thème
 2. Ajout des correctifs liés au plugin forum.
 3. Ajout des miniatures de news sur l'accueil.
 4. Correction de l'affichage de la page blog.
+5. Correction du dépassement d'image sur les news et pages custom.
